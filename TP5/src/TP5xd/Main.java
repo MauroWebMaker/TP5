@@ -1,6 +1,6 @@
 package TP5xd;
 
-/* @author Facundo Lopez Cozzella */
+/* @author Grupo 11 */
 
 public class Main {
 
