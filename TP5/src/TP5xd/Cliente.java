@@ -4,17 +4,16 @@ package TP5xd;
 
 public class Cliente {
     // atributo(s)
-    private int DNI;
+    private Integer DNI;
     private String nombre;
     private String apellido;
-    // acá tengo una duda sobre si hacer una clase Ciudad, porque en el TP está escrito en mayúsculas.
     private String ciudad;
     private String direccion;
     
     // constructor(es)
     public Cliente() {} // vacío por las dudas
     
-    public Cliente(int DNI, String nombre, String apellido, String ciudad, String direccion) {
+    public Cliente(Integer DNI, String nombre, String apellido, String ciudad, String direccion) {
         this.DNI = DNI;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -26,11 +25,11 @@ public class Cliente {
     
     
     // getter(s) & setter(s)
-    public int getDNI() {
+    public Integer getDNI() {
         return DNI;
     }
 
-    public void setDNI(int DNI) {
+    public void setDNI(Integer DNI) {
         this.DNI = DNI;
     }
 
@@ -65,6 +64,10 @@ public class Cliente {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Cliente{" + "DNI=" + DNI + ", nombre=" + nombre + ", apellido=" + apellido + ", ciudad=" + ciudad + ", direccion=" + direccion + '}';
+    }
     
 }
