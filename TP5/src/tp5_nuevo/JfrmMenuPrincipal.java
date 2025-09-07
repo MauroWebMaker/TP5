@@ -28,85 +28,104 @@ public class JfrmMenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jDesktopPane1 = new javax.swing.JDesktopPane();
+        Escritorio = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        Clientes = new javax.swing.JMenu();
+        AgregarCliente = new javax.swing.JMenuItem();
+        BorrarCliente = new javax.swing.JMenuItem();
+        Directorio = new javax.swing.JMenu();
+        BuscarClientesXCiudad = new javax.swing.JMenuItem();
+        BuscarTelefonoXApellido = new javax.swing.JMenuItem();
+        Ciudades = new javax.swing.JMenu();
+        AgregarCiudad = new javax.swing.JMenuItem();
+        Salir = new javax.swing.JMenu();
+        Salirrrr = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jDesktopPane1.setBackground(new java.awt.Color(0, 0, 0));
-        jDesktopPane1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jDesktopPane1.setForeground(new java.awt.Color(255, 255, 0));
-        jDesktopPane1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Escritorio.setBackground(new java.awt.Color(102, 102, 102));
+        Escritorio.setBorder(javax.swing.BorderFactory.createMatteBorder(3, 3, 3, 3, new java.awt.Color(0, 0, 0)));
+        Escritorio.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 541, Short.MAX_VALUE)
+        javax.swing.GroupLayout EscritorioLayout = new javax.swing.GroupLayout(Escritorio);
+        Escritorio.setLayout(EscritorioLayout);
+        EscritorioLayout.setHorizontalGroup(
+            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 843, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 364, Short.MAX_VALUE)
+        EscritorioLayout.setVerticalGroup(
+            EscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 530, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Clientes");
+        Clientes.setText("Clientes");
 
-        jMenuItem1.setText("Agregar Cliente");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        AgregarCliente.setText("Agregar Cliente");
+        AgregarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                AgregarClienteActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        Clientes.add(AgregarCliente);
 
-        jMenuItem3.setText("Borrar Cliente");
-        jMenu1.add(jMenuItem3);
-
-        jMenuBar1.add(jMenu1);
-
-        jMenu4.setText("Directorio");
-
-        jMenuItem4.setText("Buscar Clientes por Ciudad");
-        jMenu4.add(jMenuItem4);
-
-        jMenuItem5.setText("Buscar Telefono por Apellido");
-        jMenu4.add(jMenuItem5);
-
-        jMenuBar1.add(jMenu4);
-
-        jMenu2.setText("Ciudades");
-
-        jMenuItem6.setText("Agregar Ciudad");
-        jMenu2.add(jMenuItem6);
-
-        jMenuBar1.add(jMenu2);
-
-        jMenu3.setText("Salir");
-        jMenu3.addActionListener(new java.awt.event.ActionListener() {
+        BorrarCliente.setText("Borrar Cliente");
+        BorrarCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenu3ActionPerformed(evt);
+                BorrarClienteActionPerformed(evt);
+            }
+        });
+        Clientes.add(BorrarCliente);
+
+        jMenuBar1.add(Clientes);
+
+        Directorio.setText("Directorio");
+
+        BuscarClientesXCiudad.setText("Buscar Clientes por Ciudad");
+        BuscarClientesXCiudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscarClientesXCiudadActionPerformed(evt);
+            }
+        });
+        Directorio.add(BuscarClientesXCiudad);
+
+        BuscarTelefonoXApellido.setText("Buscar Telefono por Apellido");
+        BuscarTelefonoXApellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscarTelefonoXApellidoActionPerformed(evt);
+            }
+        });
+        Directorio.add(BuscarTelefonoXApellido);
+
+        jMenuBar1.add(Directorio);
+
+        Ciudades.setText("Ciudades");
+
+        AgregarCiudad.setText("Agregar Ciudad");
+        AgregarCiudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AgregarCiudadActionPerformed(evt);
+            }
+        });
+        Ciudades.add(AgregarCiudad);
+
+        jMenuBar1.add(Ciudades);
+
+        Salir.setText("Salir");
+        Salir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                SalirActionPerformed(evt);
             }
         });
 
-        jMenuItem2.setText("Salir");
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        Salirrrr.setText("Salir");
+        Salirrrr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                SalirrrrActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem2);
+        Salir.add(Salirrrr);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(Salir);
 
         setJMenuBar(jMenuBar1);
 
@@ -114,29 +133,70 @@ public class JfrmMenuPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(Escritorio)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(Escritorio)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    private void AgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarClienteActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
+        JIfrmAgregarCliente aux = new JIfrmAgregarCliente();
+        aux.setVisible(true);
+        Escritorio.add(aux);
+        Escritorio.moveToFront(aux);
+    }//GEN-LAST:event_AgregarClienteActionPerformed
 
-    private void jMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenu3ActionPerformed
-    }//GEN-LAST:event_jMenu3ActionPerformed
+    private void SalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirActionPerformed
+    }//GEN-LAST:event_SalirActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void SalirrrrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SalirrrrActionPerformed
         int aux = JOptionPane.showConfirmDialog(rootPane, "Seguro que desea salir ?", "Estas seguro ??", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
         if (aux == JOptionPane.YES_OPTION) {
             System.exit(0);
         }
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_SalirrrrActionPerformed
+
+    private void BorrarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BorrarClienteActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
+        JIfrmBorrarCliente aux = new JIfrmBorrarCliente();
+        aux.setVisible(true);
+        Escritorio.add(aux);
+        Escritorio.moveToFront(aux);
+    }//GEN-LAST:event_BorrarClienteActionPerformed
+
+    private void BuscarClientesXCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarClientesXCiudadActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
+        JIfrmBuscarClientesXCiudad aux = new JIfrmBuscarClientesXCiudad();
+        aux.setVisible(true);
+        Escritorio.add(aux);
+        Escritorio.moveToFront(aux);
+    }//GEN-LAST:event_BuscarClientesXCiudadActionPerformed
+
+    private void BuscarTelefonoXApellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarTelefonoXApellidoActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
+        JIfrmBuscarTelefonoXApellido aux = new JIfrmBuscarTelefonoXApellido();
+        aux.setVisible(true);
+        Escritorio.add(aux);
+        Escritorio.moveToFront(aux);
+    }//GEN-LAST:event_BuscarTelefonoXApellidoActionPerformed
+
+    private void AgregarCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AgregarCiudadActionPerformed
+        Escritorio.removeAll();
+        Escritorio.repaint();
+        JIfrmAgregarCiudad aux = new JIfrmAgregarCiudad();
+        aux.setVisible(true);
+        Escritorio.add(aux);
+        Escritorio.moveToFront(aux);
+    }//GEN-LAST:event_AgregarCiudadActionPerformed
 
     /**
      * @param args the command line arguments
@@ -174,17 +234,17 @@ public class JfrmMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuItem AgregarCiudad;
+    private javax.swing.JMenuItem AgregarCliente;
+    private javax.swing.JMenuItem BorrarCliente;
+    private javax.swing.JMenuItem BuscarClientesXCiudad;
+    private javax.swing.JMenuItem BuscarTelefonoXApellido;
+    private javax.swing.JMenu Ciudades;
+    private javax.swing.JMenu Clientes;
+    private javax.swing.JMenu Directorio;
+    private javax.swing.JDesktopPane Escritorio;
+    private javax.swing.JMenu Salir;
+    private javax.swing.JMenuItem Salirrrr;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
     // End of variables declaration//GEN-END:variables
 }
