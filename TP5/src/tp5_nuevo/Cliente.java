@@ -1,4 +1,4 @@
-package TP5xd;
+package tp5_nuevo;
 
 /* @author Grupo 11 */
 
@@ -67,7 +67,7 @@ public class Cliente {
 
     @Override
     public String toString() {
-        return "Cliente{" + "DNI=" + DNI + ", nombre=" + nombre + ", apellido=" + apellido + ", ciudad=" + ciudad + ", direccion=" + direccion + '}';
+        return "Cliente= " + "DNI: " + DNI + ", Nombre: " + nombre + ", Apellido: " + apellido + ", Ciudad: " + ciudad + ", Direccion: " + direccion ;
     }
     
 }
