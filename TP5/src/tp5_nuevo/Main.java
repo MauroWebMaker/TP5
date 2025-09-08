@@ -3,11 +3,14 @@ package tp5_nuevo;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeMap;
 
 /* @author Grupo 11 */
 
 public class Main {
-
+    public static HashSet<Cliente> listaAlumnos = new HashSet<>();
+    public static TreeMap<Long, Cliente> directoriooo = new TreeMap<>();
+    
     public static void main(String[] args) {
         // creación de objetos
         DirectorioTelefonico D1 = new DirectorioTelefonico();
