@@ -13,6 +13,17 @@ public class JfrmMenuPrincipal extends javax.swing.JFrame {
     public static ArrayList<String> ciudadesAgregadas = new ArrayList<>();
     public JfrmMenuPrincipal() {
         initComponents();
+        ciudadesAgregadas.add("La Punta");
+        ciudadesAgregadas.add("Juana Koslay");
+        ciudadesAgregadas.add("Centro");
+        ciudadesAgregadas.add("Merlo");
+        ciudadesAgregadas.add("Cortaderas");
+        directorio.put(2664572404L, new Cliente(42357107,"Juan Cruz","Rodriguez","La Punta","Lic 2 Mza 116 C 02"));
+        directorio.put(2664634076L, new Cliente(38751080,"Jeremias","Sirur","Centro","B114M189C18"));
+        directorio.put(2657212069L, new Cliente(46807350,"Jeremias","Hoyo","Cortaderas","Calle la escondida km 50"));
+        directorio.put(2664301099L, new Cliente(44752772, "Mauricio Damian", "Reta", "Centro", "B110viv M51 C5"));
+        directorio.put(2665245922L, new Cliente(42778631,"Facundo","Lopez Cozzella","Merlo","Mujeres de Mi Tierra 1690"));
+        directorio.put(2664262501L, new Cliente(42238525,"Agustin","Mazza","Juana Koslay","Los Zorzales 558"));
     }
 
     @SuppressWarnings("unchecked")

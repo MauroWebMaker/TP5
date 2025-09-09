@@ -85,7 +85,6 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
             }
         });
 
-        cliente_ciudad.setSelectedIndex(-1);
         cliente_ciudad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cliente_ciudadActionPerformed(evt);

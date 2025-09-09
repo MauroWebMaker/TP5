@@ -4,6 +4,8 @@
  */
 package TP5;
 
+import java.awt.event.ItemEvent;
+import java.util.Map;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -21,7 +23,7 @@ public class JIfrmBuscarClientesXCiudad extends javax.swing.JInternalFrame {
         armarCabecera();
         if(!JfrmMenuPrincipal.ciudadesAgregadas.isEmpty()){
             agregarCiudades();
-            ciudadesBuscar.setSelectedIndex(-1);
+            ciudadesBuscar.setSelectedIndex(0);
         }
     }
 
@@ -128,7 +130,7 @@ public class JIfrmBuscarClientesXCiudad extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.dispose();
+        this.dispose(); 
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void ciudadesBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ciudadesBuscarActionPerformed
@@ -136,10 +138,15 @@ public class JIfrmBuscarClientesXCiudad extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_ciudadesBuscarActionPerformed
 
     private void ciudadesBuscarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ciudadesBuscarItemStateChanged
+        if(evt.getStateChange() == ItemEvent.SELECTED){
+            modelo.setRowCount(0);
+        }
         String ciudadSelec = (String) ciudadesBuscar.getSelectedItem();
-        for (Cliente auxi : JfrmMenuPrincipal.directorio.values()) {
-            if(auxi.getCiudad().equalsIgnoreCase(ciudadSelec)){
-                modelo.addRow(new Object[]{auxi.getDNI(),auxi.getApellido(),auxi.getNombre(),auxi.getDireccion(),auxi.getCiudad(),"123"});
+        for (Map.Entry<Long,Cliente> auxi : JfrmMenuPrincipal.directorio.entrySet()) {
+            Cliente auxiC = auxi.getValue();
+            Long auxiL = auxi.getKey();
+            if(auxiC.getCiudad().equalsIgnoreCase(ciudadSelec)){
+                modelo.addRow(new Object[]{auxiC.getDNI(),auxiC.getApellido(),auxiC.getNombre(),auxiC.getDireccion(),auxiC.getCiudad(),auxiL});
             }
         }
     }//GEN-LAST:event_ciudadesBuscarItemStateChanged
@@ -168,4 +175,5 @@ public class JIfrmBuscarClientesXCiudad extends javax.swing.JInternalFrame {
         modelo.addColumn("Telefono");
         tablaCiudad.setModel(modelo);
     }
+    
 }
