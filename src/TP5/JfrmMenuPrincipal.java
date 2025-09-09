@@ -213,6 +213,7 @@ public class JfrmMenuPrincipal extends javax.swing.JFrame {
         //</editor-fold>
 
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new JfrmMenuPrincipal().setVisible(true);
             }
@@ -233,4 +234,5 @@ public class JfrmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem Salirrrr;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
+    
 }

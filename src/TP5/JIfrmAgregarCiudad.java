@@ -109,7 +109,7 @@ public class JIfrmAgregarCiudad extends javax.swing.JInternalFrame {
 
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
         if (!nombreCiudad.getText().isEmpty()) {
-            //JfrmMenuPrincipal.ciudadesAgregadas(nombreCiudad.getText());
+            JfrmMenuPrincipal.ciudadesAgregadas.add(nombreCiudad.getText());
             JOptionPane.showMessageDialog(this, "Se agrego correctamente la Ciudad: ", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
             nombreCiudad.setText("");
         }else{

@@ -17,6 +17,10 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
      */
     public JIfrmAgregarCliente() {
         initComponents();
+        if(!JfrmMenuPrincipal.ciudadesAgregadas.isEmpty()){
+            agregarCiudades();
+            cliente_ciudad.setSelectedIndex(-1);
+        }
     }
 
     /**
@@ -81,8 +85,12 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
             }
         });
 
-        cliente_ciudad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         cliente_ciudad.setSelectedIndex(-1);
+        cliente_ciudad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cliente_ciudadActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -171,8 +179,7 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
             dni.setText("");
             nombre.setText("");
             apellido.setText("");
-            cliente_ciudad.setSelectedItem(0);//no se puede dejar vacio, siempre tiene que quedar en alguna posicion
-            // podriamos poner el item1= "selecione..." pero en ese caso contaria como lleno, y se podria cargar con ese dato
+            cliente_ciudad.setSelectedIndex(-1);
             domicilio.setText("");
             telefono.setText("");
         } else {
@@ -183,6 +190,10 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
         this.dispose();
     }//GEN-LAST:event_salirActionPerformed
+
+    private void cliente_ciudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cliente_ciudadActionPerformed
+        
+    }//GEN-LAST:event_cliente_ciudadActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -202,4 +213,10 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
     private javax.swing.JButton salir;
     private javax.swing.JTextField telefono;
     // End of variables declaration//GEN-END:variables
+    
+    public void agregarCiudades(){
+        for(int i = 0 ; i < JfrmMenuPrincipal.ciudadesAgregadas.size() ; i++ ){
+            cliente_ciudad.addItem(JfrmMenuPrincipal.ciudadesAgregadas.get(i));
+        }
+    }
 }
