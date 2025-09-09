@@ -156,13 +156,7 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
-        /*/if (!ingreseLegajo.getText().isEmpty() && !ingreseApellido.getText().isEmpty() && !ingreseNombre.getText().isEmpty()) {
-            Alumno a = new Alumno(Integer.parseInt(ingreseLegajo.getText()), ingreseApellido.getText(), ingreseNombre.getText());
-            jmlInicio.listaAlumnos.add(a);
-            JOptionPane.showMessageDialog(this, "Alumno agregado con éxito", "Alumno Agregado", JOptionPane.INFORMATION_MESSAGE);
-        } else {
-            JOptionPane.showMessageDialog(this, "No puede ingresar datos vacios", "Error", JOptionPane.ERROR_MESSAGE);
-        }*/
+
         if (!dni.getText().isEmpty() && !nombre.getText().isEmpty() && !apellido.getText().isEmpty() && cliente_ciudad.getSelectedItem() != null && !domicilio.getText().isEmpty() && !telefono.getText().isEmpty()) {
             Cliente a = new Cliente(Integer.parseInt(dni.getText()), nombre.getText(), apellido.getText(), cliente_ciudad.getSelectedItem().toString(), domicilio.getText());
             System.out.println(a);
