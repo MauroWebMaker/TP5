@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.TreeMap;
 import javax.swing.JOptionPane;
 
-/**
+/*
  * @author Grupo 11
  */
 public class JfrmMenuPrincipal extends javax.swing.JFrame {
