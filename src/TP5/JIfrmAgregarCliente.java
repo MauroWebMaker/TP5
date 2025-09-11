@@ -1,16 +1,15 @@
-
 package TP5;
 
 import javax.swing.JOptionPane;
 
 /*
  * @author Grupo 11
-*/
+ */
 public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
 
     public JIfrmAgregarCliente() {
         initComponents();
-        if(!JfrmMenuPrincipal.ciudadesAgregadas.isEmpty()){
+        if (!JfrmMenuPrincipal.ciudadesAgregadas.isEmpty()) {
             agregarCiudades();
             cliente_ciudad.setSelectedIndex(-1);
         }
@@ -157,20 +156,23 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void guardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_guardarActionPerformed
-
-        if (!dni.getText().isEmpty() && !nombre.getText().isEmpty() && !apellido.getText().isEmpty() && cliente_ciudad.getSelectedItem() != null && !domicilio.getText().isEmpty() && !telefono.getText().isEmpty()) {
-            Cliente a = new Cliente(Integer.parseInt(dni.getText()), nombre.getText(), apellido.getText(), cliente_ciudad.getSelectedItem().toString(), domicilio.getText());
-            System.out.println(a);
-            JfrmMenuPrincipal.directorio.put(Long.parseLong(telefono.getText()), a);
-            JOptionPane.showMessageDialog(this, "Se agrego correctamente al cliente: "+ a.getApellido()+", "+a.getNombre() + " en el directorio", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
-            dni.setText("");
-            nombre.setText("");
-            apellido.setText("");
-            cliente_ciudad.setSelectedIndex(-1);
-            domicilio.setText("");
-            telefono.setText("");
-        } else {
-            JOptionPane.showMessageDialog(this, "No puede ingresar datos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+        try {
+            if (!dni.getText().isEmpty() && !nombre.getText().isEmpty() && !apellido.getText().isEmpty() && cliente_ciudad.getSelectedItem() != null && !domicilio.getText().isEmpty() && !telefono.getText().isEmpty()) {
+                Cliente a = new Cliente(Integer.parseInt(dni.getText()), nombre.getText(), apellido.getText(), cliente_ciudad.getSelectedItem().toString(), domicilio.getText());
+                System.out.println(a);
+                JfrmMenuPrincipal.directorio.put(Long.parseLong(telefono.getText()), a);
+                JOptionPane.showMessageDialog(this, "Se agrego correctamente al cliente: " + a.getApellido() + ", " + a.getNombre() + " en el directorio", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+                dni.setText("");
+                nombre.setText("");
+                apellido.setText("");
+                cliente_ciudad.setSelectedIndex(-1);
+                domicilio.setText("");
+                telefono.setText("");
+            } else {
+                JOptionPane.showMessageDialog(this, "No puede ingresar datos vacios", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } catch (NumberFormatException ex) {
+            JOptionPane.showMessageDialog(this,"DNI y Teléfono deben ser numeros","Error", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_guardarActionPerformed
 
@@ -179,7 +181,7 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_salirActionPerformed
 
     private void cliente_ciudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cliente_ciudadActionPerformed
-        
+
     }//GEN-LAST:event_cliente_ciudadActionPerformed
 
 
@@ -200,9 +202,9 @@ public class JIfrmAgregarCliente extends javax.swing.JInternalFrame {
     private javax.swing.JButton salir;
     private javax.swing.JTextField telefono;
     // End of variables declaration//GEN-END:variables
-    
-    public void agregarCiudades(){
-        for(int i = 0 ; i < JfrmMenuPrincipal.ciudadesAgregadas.size() ; i++ ){
+
+    public void agregarCiudades() {
+        for (int i = 0; i < JfrmMenuPrincipal.ciudadesAgregadas.size(); i++) {
             cliente_ciudad.addItem(JfrmMenuPrincipal.ciudadesAgregadas.get(i));
         }
     }

@@ -2,7 +2,7 @@ package TP5;
 
 import javax.swing.JOptionPane;
 
-/**
+/*
  * @author Grupo 11
  */
 public class JIfrmAgregarCiudad extends javax.swing.JInternalFrame {
@@ -97,7 +97,7 @@ public class JIfrmAgregarCiudad extends javax.swing.JInternalFrame {
     private void GuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GuardarActionPerformed
         if (!nombreCiudad.getText().isEmpty()) {
             JfrmMenuPrincipal.ciudadesAgregadas.add(nombreCiudad.getText());
-            JOptionPane.showMessageDialog(this, "Se agrego correctamente la Ciudad: ", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Se agrego correctamente la Ciudad: "+nombreCiudad.getText(), "Mensaje", JOptionPane.INFORMATION_MESSAGE);
             nombreCiudad.setText("");
         }else{
             JOptionPane.showMessageDialog(this, "No puede ingresar datos vacios", "Error", JOptionPane.ERROR_MESSAGE);
