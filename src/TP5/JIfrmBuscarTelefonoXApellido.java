@@ -6,7 +6,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.table.DefaultTableModel;
 
 /*
- * @author Grupo 11
+ * @author Grupo 11--
  */
 public class JIfrmBuscarTelefonoXApellido extends javax.swing.JInternalFrame {
 
