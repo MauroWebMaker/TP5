@@ -133,10 +133,8 @@ public class JIfrmBuscarTelefonoXApellido extends javax.swing.JInternalFrame {
         for (Map.Entry<Long, Cliente> auxi : JfrmMenuPrincipal.directorio.entrySet()) {
             Cliente auxiC = auxi.getValue();
 
-            String apellidoIngresado = apellidoo.getText();
-            String apellidoCliente = String.valueOf(auxiC.getApellido());
-            if (apellidoCliente.startsWith(apellidoIngresado)) {
-                listita.addElement(apellidoCliente);
+            if (auxiC.getApellido().toLowerCase().startsWith(apellidoo.getText().toLowerCase())) {
+                listita.addElement(auxiC.getApellido());
             }
         }
         
